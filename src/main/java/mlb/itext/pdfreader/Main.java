@@ -1,18 +1,10 @@
 package mlb.itext.pdfreader;
 
 import com.itextpdf.text.Rectangle;
-import com.itextpdf.text.pdf.AcroFields;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.parser.*;
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
-import technology.tabula.*;
-import technology.tabula.extractors.BasicExtractionAlgorithm;
-import technology.tabula.extractors.ExtractionAlgorithm;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * Created by faisalabdillah on 4/12/15.
@@ -27,13 +19,13 @@ public class Main {
 
             page = 2;
             //read section 1
-            //readByPage(reader, new Rectangle(150, 300, 420, 530), page);
+            readByPage(reader, new Rectangle(150, 300, 420, 530), page);
 
             //read section 2
-            //readByPage(reader, new Rectangle(0, 200, 420, 300), page);
+            readByPage(reader, new Rectangle(0, 200, 420, 300), page);
 
             //read section 3
-            //readByPage(reader, new Rectangle(0, 160, 420, 210), page);
+            readByPage(reader, new Rectangle(0, 160, 420, 210), page);
 
             page = 3;
             readByPage(reader, new Rectangle(0, 510, 600, 560), page);
